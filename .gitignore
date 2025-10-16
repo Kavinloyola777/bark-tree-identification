@@ -1,14 +1,122 @@
-best_model_resnet50v2.keras
-final_model_resnet50v2.keras
-env/
+﻿# Byte-compiled / optimized / DLL files
 __pycache__/
-*.tar.gz
-*.pyc
-*.log
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+/.python-version
+
+# envs
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Virtualenv
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# PyCharm
+.idea/
+.idea/*
+*.iml
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# model artifacts
+*.h5
+*.hdf5
+*.keras
+*.keras*
+*.ckpt
+*.pt
+*.pth
+*.pb
+*.tflite
+
+# large model files (stored in repo root)
+*.keras
+best_model_*.keras
+final_model_*.keras
+
+# dataset and logs directories
+train/
+val/
+test/
 rejected/
-dataset_report.csv
-dataset_report.json
-classification_report_heatmap_resnet50v2.png
-confusion_matrix_resnet50v2.png
-training_history_resnet50v2.png
-PortableGit/
+training_log.txt
+*.csv
+*.json
+
+# OS generated files
+Icon
+
+# Ignore the environment folder under env/ created by user
+env/
+
+# Optional: keep README, scripts and small data but ignore heavy data and user-specific files
+# Uncomment to ignore all images/data under project folders
+# *.jpg
+# *.jpeg
+# *.png
+# *.bmp
