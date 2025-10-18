@@ -1,17 +1,21 @@
 import wikipedia
-import time
-import logging
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+# Define species mapping
+species_mapping = {
+    "turmeric_tree": "Berberis_aristata",
+    # Add other species as needed, e.g.:
+    # "neem_tree": "Azadirachta indica",
+    # "mango": "Mangifera indica"
+}
 
+# Test with a specific species
+species = "turmeric_tree"
+wiki_title = species_mapping.get(species, species)
 try:
-    wikipedia.set_rate_limiting(True, min_wait=3.0)
-    time.sleep(3)
-    logger.info("Trying query: Hardwickia binata")
-    summary = wikipedia.summary("Hardwickia binata", sentences=2)
-    logger.info("Success")
-    print(summary)
+    page = wikipedia.page(wiki_title)
+    print(f"Title: {page.title}")
+    print(f"Summary: {wikipedia.summary(wiki_title, sentences=3)}")
+except wikipedia.exceptions.PageError:
+    print(f"No Wikipedia page found for '{wiki_title}'.")
 except Exception as e:
-    logger.error(f"Error: {e}")
-    print(f"Error: {e}")
+    print(f"Error fetching Wikipedia info: {e}")
